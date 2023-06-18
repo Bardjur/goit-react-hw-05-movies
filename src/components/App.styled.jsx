@@ -1,9 +1,6 @@
 import styled from '@emotion/styled';
 
 export const Wrapper = styled.div`
-  text-align: center;
+  background-color:#D0DDE7;
+  min-height: 100vh;
 `;
-
-export const Title2 = styled.h2`
-  margin-top: 30px;
-`
