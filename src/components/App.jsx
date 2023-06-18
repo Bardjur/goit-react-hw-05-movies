@@ -17,7 +17,7 @@ const App = () => {
     <Wrapper>
       <Suspense fallback={<MagnifyingGlass glassColor='#c0efff' color='#3C401D'/>}>
         <Routes>
-          <Route path="https://bardjur.github.io/goit-react-hw-05-movies/" element={<SharedLayout/>} >
+          <Route path="goit-react-hw-05-movies/" element={<SharedLayout/>} >
             <Route index element={<Home/>}/>
             <Route path="movies" element={<Movies/>} />
             <Route path="movies/:movieId" element={<MovieDetails />}>
@@ -25,7 +25,7 @@ const App = () => {
               <Route path="reviews" element={ <Reviews /> } />
             </Route>
           </Route>
-          <Route path="*" element={<Navigate to="https://bardjur.github.io/goit-react-hw-05-movies/" />} />
+          <Route path="*" element={<Navigate to="goit-react-hw-05-movies/" />} />
         </Routes>
       </Suspense>
       <ToastContainer autoClose={3000}/>
