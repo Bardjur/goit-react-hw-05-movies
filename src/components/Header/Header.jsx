@@ -4,8 +4,8 @@ export default function Header(){
   return (
     <HeadBlock>
       <Nav>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/movies">Movies</StyledLink>
+        <StyledLink to="/goit-react-hw-05-movies">Home</StyledLink>
+        <StyledLink to="/goit-react-hw-05-movies/movies">Movies</StyledLink>
       </Nav>
     </HeadBlock>
   )
