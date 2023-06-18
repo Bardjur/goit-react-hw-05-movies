@@ -11,6 +11,8 @@ export default function Movies() {
   const location = useLocation();
   const goBackPath = location.state?.from ?? '/';
 
+  console.log(location);
+
   useEffect(() => {
     fetchMovieById(movieId)
       .then(movie => {
@@ -42,8 +44,8 @@ export default function Movies() {
 
       <MoreInfoLink>
         <Title4>Additional information</Title4>
-        <StyledLink to="cast" state={{ from: location }}>Cast</StyledLink>
-        <StyledLink to="reviews" state={{ from: location }}>Reviews</StyledLink>
+        <StyledLink to="cast" state={{ from: location.state?.from ?? '/movies' }}>Cast</StyledLink>
+        <StyledLink to="reviews" state={{ from: location.state?.from ?? '/movies' }}>Reviews</StyledLink>
       </MoreInfoLink>
 
       <Outlet/>
