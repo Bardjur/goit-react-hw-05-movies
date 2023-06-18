@@ -4,7 +4,7 @@ import { fetchTrendingMovies } from "services/movie-api";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { MagnifyingGlass } from  'react-loader-spinner'
+import { MagnifyingGlass } from 'react-loader-spinner';
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
