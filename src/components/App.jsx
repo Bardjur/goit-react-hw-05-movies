@@ -1,5 +1,5 @@
 import React, {lazy, Suspense} from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { MagnifyingGlass } from 'react-loader-spinner';
@@ -17,7 +17,7 @@ const App = () => {
     <Wrapper>
       <Suspense fallback={<MagnifyingGlass glassColor='#c0efff' color='#3C401D'/>}>
         <Routes>
-          <Route path="/" element={<SharedLayout/>} >
+          <Route path="https://bardjur.github.io/goit-react-hw-05-movies/" element={<SharedLayout/>} >
             <Route index element={<Home/>}/>
             <Route path="movies" element={<Movies/>} />
             <Route path="movies/:movieId" element={<MovieDetails />}>
@@ -25,6 +25,7 @@ const App = () => {
               <Route path="reviews" element={ <Reviews /> } />
             </Route>
           </Route>
+          <Route path="*" element={<Navigate to="https://bardjur.github.io/goit-react-hw-05-movies/" />} />
         </Routes>
       </Suspense>
       <ToastContainer autoClose={3000}/>
