@@ -42,8 +42,8 @@ export default function Movies() {
 
       <MoreInfoLink>
         <Title4>Additional information</Title4>
-        <StyledLink to="cast">Cast</StyledLink>
-        <StyledLink to="reviews">Reviews</StyledLink>
+        <StyledLink to="cast" state={{ from: location }}>Cast</StyledLink>
+        <StyledLink to="reviews" state={{ from: location }}>Reviews</StyledLink>
       </MoreInfoLink>
 
       <Outlet/>
