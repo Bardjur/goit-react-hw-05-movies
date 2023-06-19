@@ -11,8 +11,6 @@ export default function Movies() {
   const location = useLocation();
   const goBackPath = location.state?.from ?? '/';
 
-  console.log(location);
-
   useEffect(() => {
     fetchMovieById(movieId)
       .then(movie => {
